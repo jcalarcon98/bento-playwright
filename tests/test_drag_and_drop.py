@@ -22,6 +22,7 @@ class DragAndDropIntegrationTestCase(unittest.TestCase):
             print(srcBound)
 
             if (srcBound and dstBound) :
+                self.page.mouse.down()
                 self.page.mouse.move(srcBound['x'] + srcBound['width'] / 2, srcBound['y'] + srcBound['height'] / 2)
                 self.page.mouse.down()
                 self.page.mouse.move(dstBound['x'] + dstBound['width'] / 2, dstBound['y'] + dstBound['height'] / 2)
